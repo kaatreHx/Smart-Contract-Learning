@@ -23,4 +23,11 @@ contract SimpleStorage {
         number -= withdraw_amount;
     }
 
+    function risky(uint x) public {
+        number += 100;
+        if(x == 0){
+            revert("Roll back"); // this revert function use to stop all transactions and before logics if condition fails basically roll back to initial state if condition doesnt meet
+        }
+    }
+
 }
