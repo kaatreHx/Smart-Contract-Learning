@@ -14,4 +14,13 @@ contract SimpleStorage {
         return greeting;
     }
 
+    function deposit(uint amount) public {
+        number += amount;
+    }
+
+    function withdraw(uint withdraw_amount) public  {
+        require(number >= withdraw_amount, "Not enough balance"); // it checks the condidtion before withdraw just like if statement and else
+        number -= withdraw_amount;
+    }
+
 }
