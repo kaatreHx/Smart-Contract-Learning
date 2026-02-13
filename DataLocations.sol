@@ -9,4 +9,9 @@ contract SimpleStorage {
         return string.concat(firstName, lastName);
     }
 
+    function process(string calldata testString) external pure returns (string memory) { //basically it uses or work with function parameter or user inputs and only for read
+        string memory greeting = string.concat("Hello,", testString);
+        return greeting;
+    }
+
 }
